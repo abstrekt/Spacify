@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding:0;   
+    background-color: #151412;
+}
+.video{
+    position: fixed;
+    background: rgba(71, 63, 78, .74);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+}
