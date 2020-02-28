@@ -6,7 +6,7 @@ Spacify is a WebApp like project which is powered by [{ Nasa APIs }](https://api
 Just clone it to your system, run ```npm install ``` on the project directory, run ```npm run start``` for viewing it as a live server on your localhost.
 ### Prerequisites
 
-Things you need to install to run it on your system
+Things you need to install to reproduce it on your system
 [npm package manager](https://nodejs.org/en/) - npm is distributed with Node.js- 
 * which means that when you download Node.js, you automatically get npm installed on your computer.
 
