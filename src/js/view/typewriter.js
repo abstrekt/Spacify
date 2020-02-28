@@ -23,7 +23,7 @@ export const typewriter = () =>{
             document.querySelector('.typing').innerHTML = letter;
         }
         if(letter.length === currentWord.length){
-            await sleep(2000);
+            await sleep(1000);
             deleting = true;
         }
         if(deleting == true){
@@ -37,9 +37,9 @@ export const typewriter = () =>{
             deleting = false;
         }
         if(deleting == true){
-            setTimeout(type, 20);
+            setTimeout(type, 10);
         }else{
-            setTimeout(type, 100);
+            setTimeout(type, 70);
         }
         
     })();
