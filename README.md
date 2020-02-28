@@ -30,7 +30,7 @@ Things you need to install to reproduce it on your system
 
 * Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us. 
 * Looking for contribution to make it responsive.
-
+* Add video (or others) support available by the API which is not a feature yet.
 ## Authors
 
 * **Abstrekt** - *all work* - [Abstrekt](https://github.com/abstrekt)
