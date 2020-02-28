@@ -8,18 +8,14 @@ import {elements} from './view/base';
 import '../css/style.css';
 import 'particles.js';
 
-// window.addEventListener('DOMContentLoaded', type.typewriter);
-
-
 const config = require('./particles.json');
 particlesJS('particles-js', config, function() {
-    console.log('callback - particles.js config loaded');
+    // console.log('callback - particles.js config loaded');
   });
 
 const state = {};
 const controlSearch = async () => {
     const query = searchView.getInput();
-
     if (query){
         state.search = new Search.SearchNasa(query);
         await state.search.getData(1);
@@ -59,11 +55,12 @@ elements.prevPage.addEventListener('click', async () =>{
     searchView.resHeader(state.search.data.metadata.total_hits, state.search.query, state.search.data.items.length, state.search.pageNo);
 });
 
-const APOD = async () => {
+// IIFE
+(async () => {
     state.apod = new Search.SearchAPOD();
     await state.apod.getAPOD();
     searchView.headerImg(state.apod.result);
-};APOD();
+  })();
 
 elements.APODdownload.addEventListener('click', () =>{
     elements.APODdownload.setAttribute("href", state.apod.result.hdurl);
@@ -71,10 +68,8 @@ elements.APODdownload.addEventListener('click', () =>{
 
 elements.form.addEventListener('submit', e =>{
     e.preventDefault();
-    // if(elements.searchInput.textContent.length == 0) return;
     elements.typewriter.style.display = 'none';
     elements.html.style.scrollbarWidth = 'thin';
-    // if(elements.typewriter.style.display = 'block') {elements.typewriter.style.display = 'none';}
     controlSearch();
     elements.searchResItems.style.display = 'grid';
     elements.header.style.height = '8vh';
@@ -82,7 +77,6 @@ elements.form.addEventListener('submit', e =>{
     elements.headerDetails.style.display = 'none';
     elements.headerTitle.style.display = 'none';
     elements.headerArrow.style.display = 'none';
-    // elements.body.style.overflowY = 'hidden';
     elements.searchResItems.insertAdjacentHTML('beforeend', markup);
     elements.resultHeader.style.display = 'flex';
     elements.navigate.style.display = 'flex';

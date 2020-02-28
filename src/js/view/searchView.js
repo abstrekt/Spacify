@@ -1,6 +1,4 @@
 import {elements} from './base';
-import axios  from 'axios';
-
 
 export const getInput = () => elements.searchInput.value;
 
@@ -40,7 +38,6 @@ export const resHeader = (totalhits, query, resLength, pageNo) =>{
     elements.resultsShowing.innerHTML =`Showing ${start}-${stop} out of ${totalhits} for query: "${query}"`;
 }
 
-
 export const headerImg = apod => {
     if(apod.media_type == "video"){
         const style = `linear-gradient(180deg, #15141200 0%, #2B2F2D33 29%, #101110 100%) center/cover`;
@@ -65,7 +62,6 @@ export const headerPopup = apod =>{
     }
 };
 
-
 export const clearInput = () => {
     elements.searchInput.value = ``;
 };
@@ -78,7 +74,6 @@ export const clearResults = () =>{
 let search;
 export const giveState = (state) => {
     search = state.data.items;
-    // console.log(`ok`););
 }
 const getFontSize = (textLength) => {
     const baseSize = 13;
@@ -157,13 +152,14 @@ elements.img_right.addEventListener('click', () =>{
     `;
     elements.img__container.innerHTML = markup;
     renderData(search, nextID);
-
 });
+
 document.addEventListener('keydown', e =>{
     if(e.keyCode === 39 && elements.img_right.style.display != 'none') {
         elements.img_right.click();
     }
 });
+
 elements.img_left.addEventListener('click', () =>{
     const currentID = elements.img_right.previousElementSibling.children[0].id;
     let prevID = 0;
@@ -178,8 +174,8 @@ elements.img_left.addEventListener('click', () =>{
     elements.img__container.innerHTML = markup;
     renderData(search, prevID);
 });
+
 document.addEventListener('keydown', e =>{
-    // console.log(e.keyCode);
     if(e.keyCode === 37 && elements.img_left.style.display != 'none') {
         elements.img_left.click();
     }

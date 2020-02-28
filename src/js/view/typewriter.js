@@ -2,7 +2,6 @@ import { elements } from "./base";
 
 export const typewriter = () =>{
     const words = ["WELCOME TO SPACIFY ('.')", 'SPACIFY IS A WebApp POWERED BY { NASA APIs } ', 'YOU CAN USE IT TO SEARCH FOR SPACE OBJECTS...','CURRENTLY WE ONLY SUPPORT IMAGES :/', 'JUST BEGIN BY HOVERING OVER ↓ BELOW! or CLICK THE IMAGE BEHIND :)'];
-    // const words = ["WELCOME TO SPACIFY ('.')"];
     let count = 0;
     let index = 0;
     let currentWord = '';
@@ -15,7 +14,6 @@ export const typewriter = () =>{
             elements.typewriter.style.display = 'none';
             return;
         }
-    
         currentWord = words[count];
     
         if(deleting == false){
@@ -48,11 +46,3 @@ export const typewriter = () =>{
     }
 }
 
-// const totalTime = (wordArr) => {
-//     let ms = 100;
-//     ms += 2000*wordArr.length;
-//     wordArr.forEach(s => {
-//         ms += s.length*120;
-//     });
-//     return ms;
-// }

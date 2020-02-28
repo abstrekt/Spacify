@@ -1,5 +1,4 @@
 import axios  from 'axios';
-// import {search} from '../index';
 import { elements } from '../view/base';
 
 export class SearchAPOD {
@@ -33,10 +32,7 @@ elements.carousel_img_down.addEventListener('click', () =>{
     const currentID = elements.img_right.previousElementSibling.children[0].id;
     elements.carousel_img_down.setAttribute("href", `https://images-assets.nasa.gov/image/${currentID}/${currentID}~orig.jpg`);
 });
-
-
-elements.btnScrollToTop.addEventListener('click', () =>{
-    
+elements.btnScrollToTop.addEventListener('click', () =>{    
     window.scrollTo({
         top:0,
         left:0,

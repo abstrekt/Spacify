@@ -1,4 +1,3 @@
-// console.log(document.querySelector('.carousel__track').children);
 export const elements ={
     html: document.querySelector('html'),
     searchInput: document.querySelector('.search-text'),
@@ -15,14 +14,12 @@ export const elements ={
     headerArrow: document.querySelector('.header__title-arrow'),
     header__popup: document.querySelector('.header__popup'),
     header__popupImg: document.querySelector('.header__popup--img'),
-    
     resultHeader: document.querySelector('.result--header'),
     totalhits: document.querySelector('.totalHits'),
     resultsShowing: document.querySelector('.results_showing'),
     nextPage: document.querySelector('.next'),
     prevPage: document.querySelector('.prev'),
     navigate: document.querySelector('.navigate'),
-    
     img__container  : document.querySelector('.img__container'),
     carousel: document.querySelector('.img__popup'),
     carouselClose: document.querySelector('.close__popup'),
