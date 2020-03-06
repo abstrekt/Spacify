@@ -14,6 +14,7 @@ particlesJS('particles-js', config, function() {
   });
 
 const state = {};
+
 const controlSearch = async () => {
     const query = searchView.getInput();
     if (query){
@@ -36,6 +37,7 @@ const controlSearch = async () => {
         searchView.resHeader(state.search.data.metadata.total_hits, state.search.query, state.search.data.items.length, state.search.pageNo);
     }
 }
+
 elements.nextPage.addEventListener('click', async () =>{
     state.search.pageNo +=1;
     elements.searchResItems.insertAdjacentHTML('beforeend', markup);
@@ -45,6 +47,7 @@ elements.nextPage.addEventListener('click', async () =>{
     searchView.renderResults(state.search.data.items);
     searchView.resHeader(state.search.data.metadata.total_hits, state.search.query, state.search.data.items.length, state.search.pageNo);
 });
+
 elements.prevPage.addEventListener('click', async () =>{
     elements.searchResItems.insertAdjacentHTML('beforeend', markup);
     state.search.pageNo -=1;

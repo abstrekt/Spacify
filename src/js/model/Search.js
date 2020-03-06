@@ -12,6 +12,7 @@ export class SearchAPOD {
         }
     }
 }
+
 export class SearchNasa {
     constructor(query){
         this.query = query;
@@ -27,11 +28,11 @@ export class SearchNasa {
     }
 }
 
-
 elements.carousel_img_down.addEventListener('click', () =>{
     const currentID = elements.img_right.previousElementSibling.children[0].id;
     elements.carousel_img_down.setAttribute("href", `https://images-assets.nasa.gov/image/${currentID}/${currentID}~orig.jpg`);
 });
+
 elements.btnScrollToTop.addEventListener('click', () =>{    
     window.scrollTo({
         top:0,
@@ -39,6 +40,7 @@ elements.btnScrollToTop.addEventListener('click', () =>{
         behavior: "smooth"
     });
 });
+
 window.onscroll = () =>{
     if (document.body.scrollTop > 2200 || document.documentElement.scrollTop > 2200) {
         elements.btnScrollToTop.style.display = "block";
