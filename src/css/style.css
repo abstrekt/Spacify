@@ -31,6 +31,7 @@ body{
     left: 5vw;
     transform: translateX(-20%);
 }
+
 .typing::after{
     content: "";
     position: absolute;
@@ -39,6 +40,7 @@ body{
     border-right: 2px solid white;
     animation: blink .8s infinite ease ;
 }
+
 @keyframes blink {
     0%{
         opacity: 1;
@@ -82,6 +84,7 @@ input:required {
         transform: scale(1);
     }
 }
+
 .header__popup--img{
     height: 95%;
     width: 100%;
@@ -94,13 +97,12 @@ input:required {
     width: 50px;
     height: 50px;
 }
+
 .logo{
     font-size: 50px;
     text-decoration: none;
     color: inherit;
 }
-
-/*! breakbreakbreak */
 
 .header__title{
     font-family: 'Elsie Swash Caps', cursive;
@@ -109,9 +111,9 @@ input:required {
     right: 5vw;
     text-align: right;
     width: 490px;
-    font-size: 70px;
-    
+    font-size: 70px;    
 }
+
 .header__title-arrow{
     display: visible;
     position: absolute;
@@ -121,6 +123,7 @@ input:required {
     align-self: center;
     opacity: .7;
 }
+
 .header__details{
     margin: 0 auto;
     margin-top: 90px;
@@ -129,6 +132,7 @@ input:required {
     font-size: 14px;
     text-align: center;
 }
+
 .search-box{
     bottom: 0;
     height: 50px;
@@ -142,7 +146,8 @@ input:required {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 50%);
-}   
+}
+
 .search-btn{
     text-decoration: none;
     float: right;
@@ -156,6 +161,7 @@ input:required {
     align-items: center;
     font-size: 30px;
 }
+
 .search-text{
     visibility: hidden;
     letter-spacing: 5px;
@@ -169,11 +175,13 @@ input:required {
     width: 0;
     transition-delay: .5s;
 }
+
 .search-btn{
     transition: .4s ease;
     transition-delay: .5s;
     transform: rotate(90deg);
 }
+
 .search-icon{
     margin: 0 auto;
     
@@ -185,6 +193,7 @@ input:required {
     visibility: visible;
     width: 400px;
 }
+
 .s-hover:hover > .search-btn {
     transform: rotate(0deg);
     transition-delay: 0s;
@@ -204,6 +213,7 @@ input:required {
     margin: 13vh auto;
     margin-top: 2vh;
 }
+
 .face{
     font-size: 185px;
     display: flex;
@@ -213,31 +223,37 @@ input:required {
     transform: translateX(-50%);
     opacity: .3;
 }
+
 p{  
     font-family: 'Roboto Mono', monospace !important;
     font-weight: 700;
     font-size: 20px;
     align-self: center;
 }
+
 .result--header{
     display: none;
     margin-top: 96px;
     margin-left: 35px;
 }
+
 .result--header > div{
     padding: 0 20px;
 }
+
 .navigate{
     position: absolute;
     right: 0;
     font-size: 25px;
 }
+
 .navigate > div{
     z-index: 1;
     cursor: pointer;
     margin: auto;
     margin:0 20px;
 }
+
 .image{
     height: 250px;
     background-size: cover;
@@ -245,13 +261,14 @@ p{
     z-index: 1;
     cursor: pointer;
 }
+
 .next{
     right: 0;
 }
+
 .prev{
     left: 0;
 }
-
 
 /* carousel */
 .img__popup{
@@ -294,6 +311,7 @@ p{
     justify-self: center;
     position: relative;
 }
+
 .img--download{
     color: inherit;
     position: absolute;
@@ -308,6 +326,7 @@ p{
     font-size: 30px;
     cursor: pointer;
 }
+
 .carousel--right{
     position: absolute;
     top: 50%;
@@ -315,10 +334,12 @@ p{
     font-size: 30px;
      cursor: pointer;
 }
+
 .img{
     height: 100%;
     width: auto;
 }
+
 .description{
     grid-area: "det";
     height: 100%;
@@ -326,6 +347,7 @@ p{
     flex-direction: column;
     justify-content: space-between;
 }
+
 .img__title{
     font-family: 'Miriam Libre', sans-serif;
     font-size: 65px;
@@ -337,6 +359,7 @@ p{
     margin-top: 20px;
     border-left: 2px black solid;
 }
+
 .img__details{
     margin: 15px;
     font-size: 15px;
@@ -348,12 +371,14 @@ p{
     scrollbar-color: #7f7f7f; /* thumb and track color */
     scrollbar-width: thin;
 }
+
 .img__creators{
     margin: 10px;
     bottom: 5%;
     margin-left: 5px;
     font-size: 10.5px;
 }
+
 .img_keyword{
     font-size: 7px;
     position: absolute;
@@ -401,12 +426,11 @@ p{
     opacity: .9;
     cursor: pointer;
 }
+
 .btnScrollToTop:active{
     opacity: .7;
     transform: scale(.9);
-
 }
-
 
 #preloader{
     width: 100vw;
@@ -425,6 +449,7 @@ p{
     transform: translateX(-50%);
     font-size: 50px;
 }
+
 .fire{
     transform: translate(-50%);
     height: 5px;
@@ -436,6 +461,7 @@ p{
     border-radius: 2px 10px 1px 0;
     transform: rotate(-223deg);
 }
+
 .fire > span > span:nth-child(1),
 .fire > span > span:nth-child(2),
 .fire > span > span:nth-child(3),
@@ -448,12 +474,14 @@ p{
     position: fixed;
     animation: speeder .5s linear infinite;
 }
+
 .fire > span > span:nth-child(1) {
     position: fixed;
     top: -7px;
     right: 30px;
     animation: fazer1 .3s linear infinite;
 }
+
 .fire > span > span:nth-child(2) {
     position: fixed;
     top: -13px;
@@ -461,6 +489,7 @@ p{
     animation: fazer2 .4s linear infinite;
     animation-delay: -.1s;
 }
+
 .fire > span > span:nth-child(3) {
     position: fixed;
     top: -19px;
@@ -468,6 +497,7 @@ p{
     animation: fazer3 .4s linear infinite;
     animation-delay: -.3s;
 }
+
 .fire > span > span:nth-child(4) {
     position: fixed;
     top: -25px;
@@ -475,6 +505,7 @@ p{
     animation: fazer4 .2s linear infinite;
     animation-delay: -.4s;
 }
+
 .fire > span > span:nth-child(5) {
     position: fixed;
     top: -31px;
@@ -482,6 +513,7 @@ p{
     animation: fazer5 .4s linear infinite;
     animation-delay: -.5s;
 }
+
 .fire > span > span:nth-child(6) {
     position: fixed;
     top: -37px;
@@ -489,6 +521,7 @@ p{
     animation: fazer6 .3s linear infinite;
     animation-delay: -.6s;
 }
+
 @keyframes fazer1 {
     0% {
     left:-20px;
@@ -498,6 +531,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes fazer2 {
     0% {
     left: -35px;
@@ -507,6 +541,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes fazer3 {
     0% {
     left: -40px;
@@ -516,6 +551,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes fazer4 {
     0% {
     left: -35px;
@@ -525,6 +561,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes fazer5 {
     0% {
     left: -30px;
@@ -534,6 +571,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes fazer6 {
     0% {
     left: -20px;
@@ -553,41 +591,49 @@ p{
     transform: rotate(-218deg);
     overflow: hidden;
 }
+
 .longfazers span {
     position: absolute;
     height: 1px;
     width: 30%;
     background: #EDECDC;
 }
+
 .longfazers span:nth-child(1) {
     top: 20%;
     animation: lf .6s linear infinite;
     animation-delay: -5s;
 }
+
 .longfazers span:nth-child(2) {
     top: 40%;
     animation: lf2 .8s linear infinite;
     animation-delay: -1s;
 }
+
 .longfazers span:nth-child(3) {
     top: 60%;
     animation: lf3 .6s linear infinite;
 }
+
 .longfazers span:nth-child(4) {
     top: 80%;
     animation: lf4 .5s linear infinite;
     animation-delay: -3s;
 }
+
 .longfazers span:nth-child(5) {
     top: 10%;
     animation: lf5 .5s linear infinite;
     animation-delay: -3s;
 }
+
 .longfazers span:nth-child(6) {
     top: 90%;
     animation: lf6 .5s linear infinite;
     animation-delay: -3s;
 }
+
 .longfazers span:nth-child(7) {
     top: 100%;
     animation: lf7 .5s linear infinite;
@@ -603,6 +649,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes lf2 {
     0% {
     left: 200%;
@@ -612,6 +659,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes lf3 {
     0% {
     left: 200%;
@@ -621,6 +669,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes lf4 {
     0% {
     left: 200%;
@@ -630,6 +679,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes lf5 {
     0% {
     left: 200%;
@@ -639,6 +689,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes lf6 {
     0% {
     left: 200%;
@@ -648,6 +699,7 @@ p{
     opacity: 0;
     }
 }
+
 @keyframes lf7 {
     0% {
     left: 200%;

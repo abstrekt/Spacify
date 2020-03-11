@@ -114,6 +114,7 @@ const renderData = (search, id) => {
         }
     };    
 }
+
 elements.searchResItems.addEventListener('click', e =>{
     const targetDiv = e.target.closest('div')
     const targetImgID = targetDiv.id;
@@ -180,102 +181,3 @@ document.addEventListener('keydown', e =>{
         elements.img_left.click();
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// carousel
-    // var findIndex = require("jspolyfill-array.prototype.findIndex");
-    // var findIndex = require('array.prototype.findindex');
-// const setSlidePos = (slide, index) =>{
-//     const slidewidth  = elements.slides[0].getBoundingClientRect().width;
-//     slide.style.left = slidewidth * index + `px`;
-// };
-// Array.prototype.forEach.call(elements.slides, setSlidePos);
-
-// const moveSlide = (track,  current, targetSlide) =>{
-//     track.style.transform = `translateX(-${targetSlide.style.left})`;
-//     current.classList.remove('current');
-//     targetSlide.classList.add('current');
-// };
-
-// const hideShowArrows = (targetIndex, slides, prev, next) =>{
-//     if (targetIndex === 0){
-//         prev.classList.add('inactive');
-//         next.classList.remove('inactive');
-//     }else if (targetIndex === slides.length - 1) {
-//         prev.classList.remove('inactive');
-//         next.classList.add('inactive');
-//     }else{
-//         next.classList.remove('inactive');
-//         prev.classList.remove('inactive');
-//     }
-// };
-
-// //todo
-// // const findIndex = () =>{
-
-// // }
-
-// elements.prev.addEventListener('click', e =>{
-//     const current = elements.track.querySelector('.current');
-//     const prevSlide = current.previousElementSibling;
-//     //todo cannot polyfiill
-//     // const prevIndex = slides.findIndex(slide => slide === prevSlide);
-//     let prevIndex = -1;
-//     for (let i = 0; i < elements.slides.length; ++i) {
-//         if (elements.slides[i].name == prevSlide) {
-//             prevIndex = i;
-//             break;
-//         }
-//     };
-//     moveSlide(elements.track, current, prevSlide);
-//     hideShowArrows(prevIndex, elements.slides, elements.prev, elements.next);
-// });
-
-// elements.next.addEventListener('click', e =>{
-//     const current = elements.track.querySelector('.current');
-//     const nextSlide = current.nextElementSibling;
-//     //todo cannot polyfiill
-//     // const nextIndex = elements.slides.findIndex(slide => slide === nextSlide);
-//     let nextIndex = -1;
-//     for (let i = 0; i < elements.slides.length; ++i) {
-//         if (elements.slides[i].name == nextSlide) {
-//             nextIndex = i;
-//             break;
-//         }
-//     };
-//     moveSlide(elements.track, current, nextSlide);
-//     hideShowArrows(nextIndex, elements.slides, elements.prev, elements.next);
-// });
-
