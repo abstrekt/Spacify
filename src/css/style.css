@@ -362,6 +362,7 @@ p {
     height: 330px;
     width: 360px;
     overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 10px;
     scrollbar-color: #7f7f7f; /* thumb and track color */
     scrollbar-width: thin;
