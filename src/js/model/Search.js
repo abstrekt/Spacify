@@ -8,7 +8,7 @@ export class SearchAPOD {
             const res = await axios(`https://api.nasa.gov/planetary/apod?api_key=${key}`);
             this.result = res.data;
         }catch(err){
-            alert(err);
+            alert('API error: Please try after sometimes :(');
         }
     }
 }
@@ -23,7 +23,7 @@ export class SearchNasa {
             const data = await axios(`https://images-api.nasa.gov/search?page=${page}&q=${this.query}&media_type=image`);
             this.data = data.data.collection;
         }catch(err){
-            alert(err);
+            alert('API error: Please try after sometimes :(');
         }
     }
 }
