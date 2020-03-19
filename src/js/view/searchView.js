@@ -13,22 +13,22 @@ export const renderResults  = images => {
     images.forEach(renderImage);
 }
 
-export const resHeader = (totalhits, query, resLength, pageNo) =>{
+export const resHeader = (totalhits, query, resLength, pageNo) => {
     let start = 1 + ((pageNo - 1) * 100);
     let stop = resLength + ((pageNo - 1) * 100);
-    const lastPage = Math.floor(totalhits/100);
-    if (lastPage == 0){
+    const lastPage = Math.floor(totalhits / 100);
+    if (lastPage == 0) {
         elements.prevPage.style.display = 'none';
         elements.nextPage.style.display = 'none';
-    }else if(pageNo == 1){
+    }else if(pageNo == 1) {
         elements.prevPage.style.display = 'none';
         elements.nextPage.style.display = 'block';
         elements.nextPage.innerHTML = '<i class="fas fa-caret-right"></i>';
-    }else if(pageNo == lastPage+1){
+    }else if(pageNo == lastPage + 1) {
         elements.prevPage.style.display = 'block';
         elements.nextPage.style.display = 'none';
         elements.prevPage.innerHTML = '<i class="fas fa-caret-left"></i>';
-    }else{
+    }else {
         elements.prevPage.style.display = 'block';
         elements.nextPage.style.display = 'block';
         elements.nextPage.innerHTML = '<i class="fas fa-caret-right"></i>';
@@ -39,12 +39,12 @@ export const resHeader = (totalhits, query, resLength, pageNo) =>{
 }
 
 export const headerImg = apod => {
-    if(apod.media_type == "video"){
+    if(apod.media_type == "video") {
         const style = `linear-gradient(180deg, #15141200 0%, #2B2F2D33 29%, #101110 100%) center/cover`;
         elements.header.style.background = style;
         const iframe = `<iframe src="${apod.url}?vq=hd1080&autoplay=1&loop=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&controls=0&disablekb=1" width="100%" height="100%" frameborder="0"></iframe>`;
         elements.header.innerHTML = iframe;
-    }else{
+    }else {
         const style = `linear-gradient(180deg, #15141200 0%, #2B2F2D33 29%, #101110 100%), url(${apod.url}) center/cover`;
         elements.header.style.background = style;
     }
@@ -52,11 +52,11 @@ export const headerImg = apod => {
     elements.headerDetails.innerHTML = `<q>${apod.explanation}</q>`;
 };
 
-export const headerPopup = apod =>{
-    if(apod.media_type == "video"){
+export const headerPopup = apod => {
+    if(apod.media_type == "video") {
         elements.header__popupImg.innerHTML = `<iframe src="${apod.url}?vq=hd1080&autoplay=1&loop=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&controls=0&disablekb=1" width="100%" height="100%" frameborder="0"></iframe>`; 
         elements.header__popup.style.display = 'flex'; 
-    }else{
+    }else {
         elements.header__popupImg.style.background = `url(${apod.url}) center/contain no-repeat`; 
         elements.header__popup.style.display = 'flex'; 
     }
@@ -66,7 +66,7 @@ export const clearInput = () => {
     elements.searchInput.value = ``;
 };
 
-export const clearResults = () =>{
+export const clearResults = () => {
     elements.searchResItems.innerHTML = ``;
 }
 
@@ -91,10 +91,10 @@ const renderData = (search, id) => {
             if(x == 0) {
                 elements.img_left.style.display = 'none';
                 elements.img_right.style.display = 'block';
-            }else if(x == search.length - 1){
+            }else if(x == search.length - 1) {
                 elements.img_left.style.display = 'block';
                 elements.img_right.style.display = 'none';
-            }else{
+            }else {
                 elements.img_right.style.display = 'block';
                 elements.img_left.style.display = 'block';
             }
@@ -115,7 +115,7 @@ const renderData = (search, id) => {
     };    
 }
 
-elements.searchResItems.addEventListener('click', e =>{
+elements.searchResItems.addEventListener('click', e => {
     const targetDiv = e.target.closest('div')
     const targetImgID = targetDiv.id;
     const markup = `
@@ -125,22 +125,26 @@ elements.searchResItems.addEventListener('click', e =>{
     elements.img__container.innerHTML = markup;
     elements.carousel.style.display = 'grid';
 });
-elements.header__popupClose.addEventListener('click', e =>{
+
+elements.header__popupClose.addEventListener('click', e => {
     e.preventDefault();
     elements.carousel.style.display = 'none';
     elements.header__popup.style.display = 'none';
 });
-elements.carouselClose.addEventListener('click', e =>{
+
+elements.carouselClose.addEventListener('click', e => {
     e.preventDefault();
     elements.carousel.style.display = 'none';
 
 });
-document.addEventListener('keydown', e =>{
+
+document.addEventListener('keydown', e => {
     if(e.keyCode === 27 && elements.carousel.style.display != 'none') {
         elements.popupClose.click();
     }
 });
-elements.img_right.addEventListener('click', () =>{
+
+elements.img_right.addEventListener('click', () => {
     const currentID = elements.img_right.previousElementSibling.children[0].id;
     let nextID = 0;
     for (let x = 0; x < search.length; x++) {
@@ -155,17 +159,17 @@ elements.img_right.addEventListener('click', () =>{
     renderData(search, nextID);
 });
 
-document.addEventListener('keydown', e =>{
+document.addEventListener('keydown', e => {
     if(e.keyCode === 39 && elements.img_right.style.display != 'none') {
         elements.img_right.click();
     }
 });
 
-elements.img_left.addEventListener('click', () =>{
+elements.img_left.addEventListener('click', () => {
     const currentID = elements.img_right.previousElementSibling.children[0].id;
     let prevID = 0;
     for (let x = 0; x < search.length; x++) {
-        if (currentID == search[x].data[0].nasa_id){
+        if (currentID == search[x].data[0].nasa_id) {
             prevID = search[x-1].data[0].nasa_id;
         }
     }
@@ -176,7 +180,7 @@ elements.img_left.addEventListener('click', () =>{
     renderData(search, prevID);
 });
 
-document.addEventListener('keydown', e =>{
+document.addEventListener('keydown', e => {
     if(e.keyCode === 37 && elements.img_left.style.display != 'none') {
         elements.img_left.click();
     }

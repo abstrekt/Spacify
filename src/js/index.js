@@ -1,6 +1,3 @@
-// XMW1uWHuORTAO1OrGMH3w2nb5r2urii7qvbakeMr
-// https://api.nasa.gov/planetary/apod?api_key=XMW1uWHuORTAO1OrGMH3w2nb5r2urii7qvbakeMr
-
 import * as Search from './model/Search';
 import * as searchView from './view/searchView';
 import * as type from './view/typewriter';
@@ -17,7 +14,7 @@ const state = {};
 
 const controlSearch = async () => {
     const query = searchView.getInput();
-    if (query){
+    if (query) {
         state.search = new Search.SearchNasa(query);
         await state.search.getData(1);
         searchView.clearResults();
@@ -39,7 +36,7 @@ const controlSearch = async () => {
 }
 
 elements.nextPage.addEventListener('click', async () =>{
-    state.search.pageNo +=1;
+    state.search.pageNo += 1;
     elements.searchResItems.insertAdjacentHTML('beforeend', markup);
     await state.search.getData(state.search.pageNo);
     searchView.clearResults();
@@ -48,9 +45,9 @@ elements.nextPage.addEventListener('click', async () =>{
     searchView.resHeader(state.search.data.metadata.total_hits, state.search.query, state.search.data.items.length, state.search.pageNo);
 });
 
-elements.prevPage.addEventListener('click', async () =>{
+elements.prevPage.addEventListener('click', async () => {
     elements.searchResItems.insertAdjacentHTML('beforeend', markup);
-    state.search.pageNo -=1;
+    state.search.pageNo -= 1;
     await state.search.getData(state.search.pageNo);
     searchView.clearResults();
     searchView.giveState(state.search);
@@ -65,11 +62,11 @@ elements.prevPage.addEventListener('click', async () =>{
     searchView.headerImg(state.apod.result);
   })();
 
-elements.APODdownload.addEventListener('click', () =>{
+elements.APODdownload.addEventListener('click', () => {
     elements.APODdownload.setAttribute("href", state.apod.result.hdurl);
 });
 
-elements.form.addEventListener('submit', e =>{
+elements.form.addEventListener('submit', e => {
     e.preventDefault();
     elements.typewriter.style.display = 'none';
     elements.html.style.scrollbarWidth = 'thin';

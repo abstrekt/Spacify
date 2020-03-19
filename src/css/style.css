@@ -1,9 +1,9 @@
-html{
+html {
     scrollbar-color: #7f7f7f; /* thumb and track color */
     scrollbar-width: none;   
 }
 
-body{
+body {
     margin:0;
     padding: 0;
     background-color: #151412;
@@ -13,15 +13,21 @@ body{
     height: 100vh;
 }
 
-.particles{
-    position: absolute;
+.particles {
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
 }
 
-.typing{
+.particles > canvas {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.typing {
     display: none;
     font-size: 30px;
     font-family: 'Source Code Pro', monospace;
@@ -32,7 +38,7 @@ body{
     transform: translateX(-20%);
 }
 
-.typing::after{
+.typing::after {
     content: "";
     position: absolute;
     width: 1px;
@@ -55,14 +61,14 @@ input:required {
 }
 
 /** preloader */
-.header{
+.header {
     display: flex;
     position: relative;
     height: 65vh;
     width: 100%;
     z-index: 1;
 }
-.header__popup{
+.header__popup {
     transform: scale(0.5);
     transition: all ease-in ;
     animation: scale .5s forwards;
@@ -74,7 +80,7 @@ input:required {
     display: none;
 }
 
-@keyframes scale{
+@keyframes scale {
     0%{
         transform: scale(0.8);
         opacity: 0;
@@ -85,26 +91,26 @@ input:required {
     }
 }
 
-.header__popup--img{
+.header__popup--img {
     height: 95%;
     width: 100%;
     margin: auto 0;
     justify-self: center;
 }
 
-.logo-div{
+.logo-div {
     margin: 20px 30px;
     width: 50px;
     height: 50px;
 }
 
-.logo{
+.logo {
     font-size: 50px;
     text-decoration: none;
     color: inherit;
 }
 
-.header__title{
+.header__title {
     font-family: 'Elsie Swash Caps', cursive;
     align-self: center;
     position: absolute;
@@ -114,17 +120,7 @@ input:required {
     font-size: 70px;    
 }
 
-.header__title-arrow{
-    display: visible;
-    position: absolute;
-    right: 5vw;
-    width: 45vw;
-    height: 30px;
-    align-self: center;
-    opacity: .7;
-}
-
-.header__details{
+.header__details {
     margin: 0 auto;
     margin-top: 90px;
     display: flex;
@@ -133,7 +129,7 @@ input:required {
     text-align: center;
 }
 
-.search-box{
+.search-box {
     bottom: 0;
     height: 50px;
     padding: 10px;
@@ -148,7 +144,7 @@ input:required {
     transform: translate(-50%, 50%);
 }
 
-.search-btn{
+.search-btn {
     text-decoration: none;
     float: right;
     background-color: transparent;
@@ -162,7 +158,7 @@ input:required {
     font-size: 30px;
 }
 
-.search-text{
+.search-text {
     visibility: hidden;
     letter-spacing: 5px;
     border: none;
@@ -176,13 +172,13 @@ input:required {
     transition-delay: .5s;
 }
 
-.search-btn{
+.search-btn {
     transition: .4s ease;
     transition-delay: .5s;
     transform: rotate(90deg);
 }
 
-.search-icon{
+.search-icon {
     margin: 0 auto;
     
 }
@@ -200,7 +196,7 @@ input:required {
 
 }
 
-.search-result{
+.search-result {
     display: none;
     grid-template-columns: repeat(3, 1fr );
     gap: 40px 20px;
@@ -214,7 +210,7 @@ input:required {
     margin-top: 2vh;
 }
 
-.face{
+.face {
     font-size: 185px;
     display: flex;
     flex-direction: column;
@@ -224,37 +220,37 @@ input:required {
     opacity: .3;
 }
 
-p{  
+p {
     font-family: 'Roboto Mono', monospace !important;
     font-weight: 700;
     font-size: 20px;
     align-self: center;
 }
 
-.result--header{
+.result--header {
     display: none;
     margin-top: 96px;
     margin-left: 35px;
 }
 
-.result--header > div{
+.result--header > div {
     padding: 0 20px;
 }
 
-.navigate{
+.navigate {
     position: absolute;
     right: 0;
     font-size: 25px;
 }
 
-.navigate > div{
+.navigate > div {
     z-index: 1;
     cursor: pointer;
     margin: auto;
     margin:0 20px;
 }
 
-.image{
+.image {
     height: 250px;
     background-size: cover;
     background-position: center;
@@ -262,16 +258,16 @@ p{
     cursor: pointer;
 }
 
-.next{
+.next {
     right: 0;
 }
 
-.prev{
+.prev {
     left: 0;
 }
 
 /* carousel */
-.img__popup{
+.img__popup {
     transform: scale(0.5);
     animation: scale ease-in forwards .2s;
     position: fixed;
@@ -290,7 +286,7 @@ p{
     z-index: 2;
 }
 
-.x{
+.x {
     position: absolute;
     right: 15px;
     top: 5px;
@@ -303,7 +299,7 @@ p{
     -webkit-user-select: none;
 }
 
-.img__container{
+.img__container {
     grid-area: "img";
     height: 95%;
     width: 90%;   
@@ -312,14 +308,14 @@ p{
     position: relative;
 }
 
-.img--download{
+.img--download {
     color: inherit;
     position: absolute;
     bottom: 1%;
     right: 1%;
 }
 
-.carousel--left{
+.carousel--left {
     position: absolute;
     top: 50%;
     left: 1%;
@@ -327,7 +323,7 @@ p{
     cursor: pointer;
 }
 
-.carousel--right{
+.carousel--right {
     position: absolute;
     top: 50%;
     right: 1%;
@@ -335,12 +331,12 @@ p{
      cursor: pointer;
 }
 
-.img{
+.img {
     height: 100%;
     width: auto;
 }
 
-.description{
+.description {
     grid-area: "det";
     height: 100%;
     display: flex;
@@ -348,7 +344,7 @@ p{
     justify-content: space-between;
 }
 
-.img__title{
+.img__title {
     font-family: 'Miriam Libre', sans-serif;
     font-size: 65px;
     font-size: 4vw;
@@ -357,29 +353,29 @@ p{
     color: inherit;
     margin: 15px 0;
     margin-top: 20px;
-    border-left: 2px black solid;
 }
 
-.img__details{
+.img__details {
     margin: 15px;
     font-size: 15px;
     text-align: right;
     height: 330px;
     width: 360px;
     overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 10px;
     scrollbar-color: #7f7f7f; /* thumb and track color */
     scrollbar-width: thin;
 }
 
-.img__creators{
+.img__creators {
     margin: 10px;
     bottom: 5%;
     margin-left: 5px;
     font-size: 10.5px;
 }
 
-.img_keyword{
+.img_keyword {
     font-size: 7px;
     position: absolute;
     left: 0;
@@ -389,34 +385,7 @@ p{
     font-size: .8rem;
 }
 
-.cursor{
-    z-index: 1000000000000;
-    width: 12px;
-    height: 12px;
-    border: 2px solid #EDECDC;
-    border-radius: 50%;
-    position: absolute;
-    transition: ease-out 50ms;
-    pointer-events:none;
-}
-
-.expand{
-    animation: cursorAnim3 .5s forwards;
-    background-color:rgba(160, 0, 0, 0.74);
-    border: none;
-}
-
-@keyframes cursorAnim3 {
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(3);
-        opacity: 0;
-    }
-}
-
-.btnScrollToTop{
+.btnScrollToTop {
     display: none;
     position: fixed;
     bottom: 15px;
@@ -427,12 +396,12 @@ p{
     cursor: pointer;
 }
 
-.btnScrollToTop:active{
+.btnScrollToTop:active {
     opacity: .7;
     transform: scale(.9);
 }
 
-#preloader{
+#preloader {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -441,7 +410,7 @@ p{
     left: 0;
 }
 
-.meteor{
+.meteor {
     position: fixed;
     animation: speeder .5s linear infinite;
     left: 49%;
@@ -450,7 +419,7 @@ p{
     font-size: 50px;
 }
 
-.fire{
+.fire {
     transform: translate(-50%);
     height: 5px;
     width: 35px;

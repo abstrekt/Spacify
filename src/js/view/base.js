@@ -1,4 +1,4 @@
-export const elements ={
+export const elements = {
     html: document.querySelector('html'),
     searchInput: document.querySelector('.search-text'),
     searchBtn: document.querySelector('.search-btn'),
