@@ -2,11 +2,14 @@
   "name": "spacify",
   "version": "1.0.0",
   "description": "API project",
+  "homepage": "https://abstrekt.github.io/Spacify",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Abstrekt",
   "license": "ISC",
@@ -27,6 +30,7 @@
     "array.prototype.findindex": "^2.0.2",
     "axios": "^0.19.1",
     "babel-polyfill": "^6.26.0",
+    "gh-pages": "^2.2.0",
     "particles.js": "^2.0.0"
   }
 }
