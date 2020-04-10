@@ -3,7 +3,7 @@ Visit here:
 https://abstrekt.github.io/Spacify/
 
 Spacify is a WebApp like client-side project which is powered by [{ Nasa APIs }](https://api.nasa.gov/) that you can use for searching space objects, whatever that is available in NASA library for images.
-* To use just download the repo & open index.html found inside the dist folder.
+
 ## Getting Started
 Just clone it to your system, run ```npm install ``` on the project directory, run ```npm run start``` for viewing it as a live server on your localhost.
 ### Prerequisites
