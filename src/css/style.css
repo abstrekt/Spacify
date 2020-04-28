@@ -712,3 +712,22 @@ p {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+
+#block-mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #151412;
+  z-index: 100000000;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 900px) {
+  #block-mobile {
+    display: flex;
+  }
+}

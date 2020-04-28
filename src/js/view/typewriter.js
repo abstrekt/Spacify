@@ -3,10 +3,7 @@ import { elements } from "./base";
 export const typewriter = () => {
   const words = [
     "WELCOME TO SPACIFY ('.')",
-    "SPACIFY IS A WebApp POWERED BY { NASA APIs } ",
-    "YOU CAN USE IT TO SEARCH FOR SPACE OBJECTS...",
-    "CURRENTLY WE ONLY SUPPORT IMAGES :/",
-    "JUST BEGIN BY HOVERING OVER ↓ BELOW! or CLICK THE IMAGE BEHIND :)"
+    "BEGIN BY SEARCHING FOR ANYTHING RELATED TO THE SPACE.. "
   ];
   let count = 0;
   let index = 0;
