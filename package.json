@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "array.prototype.findindex": "^2.0.2",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "gh-pages": "^2.2.0",
     "particles.js": "^2.0.0"
